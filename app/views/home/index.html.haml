@@ -1,0 +1,44 @@
+- if user_signed_in? && current_user.skills.blank?
+  .alert.alert-info
+    Please click 
+    = link_to 'here', new_user_to_skill_path
+    to fill out your skills!
+- if user_signed_in? && current_user.interests.blank?
+  .alert.alert-warning
+    Click
+    = link_to 'here', new_user_to_interest_path
+    to fill out your interests!
+#call-to-action.row
+  .span9
+    %h3 Assemble a team and kick some class!
+    / end text
+  %a.btn.btn-large.btn-success.offset1.right{:href => "/projects"} Get Started!
+
+.container
+  / Main hero unit for a primary marketing message or call to action
+  #myCarousel.carousel.slide
+    / Carousel items
+    .carousel-inner
+      .item.active
+        %img{:src => "assets/LogoIMG.png"}/
+        .carousel-caption
+          %h4 Create a class project and build a great team
+          %p Classemble matches your project needs with team-member interests and skills.
+      .item
+        %img{:src => "assets/RecruitIMG.png"}/
+        .carousel-caption
+          %h4 Recruit classmates
+          %p Classemble provides a list of potential candidates and friends that may be a good fit for your project.
+      .item
+        %img{:src => "assets/collaborateIMG.png"}/
+        .carousel-caption
+          %h4 Search for cool projects
+          %p Classemble provides a list of potential projects that meets your interests and skills.	
+    / Carousel nav
+    %a.carousel-control.left{"data-slide" => "prev", :href => "#myCarousel"} ‹
+    %a.carousel-control.right{"data-slide" => "next", :href => "#myCarousel"} ›
+
+.row
+%hr
+  %footer
+    %p © Classemble 2013

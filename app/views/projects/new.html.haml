@@ -1,0 +1,31 @@
+.white_wrapper
+  %h2
+    Create New Project
+  %br
+  .center
+    %h4{:style => "text-align:center;"}
+      Owner:
+    = current_user.name
+
+  %br
+  %br
+    = simple_form_for @project do |f|
+      = f.hidden_field :user_id, :value => current_user.id
+      %br
+      %span
+        Title
+      = f.input :title
+      %span
+        Category
+      = f.input :category, :as => :select, :collection => Interest.all, :input_html => { :class => "chzn-select" }
+      %br
+      %span
+        Tagline
+        = f.input :short_description, :placeholder => "witty slogan"
+      %span
+        Description
+      = f.input :description, :input_html => {:rows => 10,:style => "width:400px;"}, :hint => "Please provide the applicants with a description of what your project consists of and what you are looking for.", :placeholder => "enter a message"
+    
+      
+    
+      = f.submit "Submit", :class => "btn btn-primary btn-large"

@@ -1,0 +1,34 @@
+.hero-unit
+  .row
+    .span3
+      = image_tag avatar_url(User.find(params[:id]),300)
+  
+    .span9{:style => "text-align:center;"}
+      %h1
+        = @user.name
+      %br
+      %h5
+        = @user.description
+      .row
+        .span9
+          %br
+          .center
+            %span
+              Interests
+            %br
+            %span
+              - @user.interests.each do |i|
+                %span.badge.badge-info
+                  = i.name
+          .row
+            .span9
+              %br
+              .center
+                Skills
+                %br
+                %span
+                  - @user.user_to_skills.each do |i|
+                    %span.badge.badge-info
+                      = i.name
+                    %span.badge.badge-warning
+                      = i.level

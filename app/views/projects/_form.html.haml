@@ -1,0 +1,9 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :description, :as => :text, :input_html => {:rows => 5}
+    = f.hidden_field :user_id, :value => current_user.id
+
+    = f.button :submit, :class => "btn btn-primary"

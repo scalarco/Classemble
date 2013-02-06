@@ -1,0 +1,25 @@
+.white_wrapper.width1000
+  - @users.each do |u|
+    .row{:style => "margin-bottom:20px;"}
+      .span3
+        = link_to (image_tag avatar_url(u, 100)), user_path(u), :class => "left"
+        = link_to u.name, user_path(u), :style => "font-size:16px;margin-left:10px;", :class => "left"
+        %br
+        %br
+        %span.badge.badge-warning{:style => "float:left;margin-left:20px;padding:10px 4px;font-size:30px;"}
+          = u.weight
+      .span4    
+        = u.description
+      .span2
+        - u.user_to_skills.each do |s|
+          %div{:style => "margin-top:5px;"}
+            %span.badge.badge-info
+              = s.name
+            %span.badge.badge-warning
+              = s.level
+            %br
+      - u.user_to_interests.each do |i|
+        %div{:style => "margin-top:10px;"}
+          %span.label.label-important
+            = i.name
+    

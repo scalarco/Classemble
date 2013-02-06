@@ -1,0 +1,54 @@
+
+<div id="project-selections" class="primary-wrapper">
+  <% @projects.each do |project| %>
+  <div class="project-wrapper" data-project="<%= project.id %>">
+    <div class="project-left">      
+      <h3 class="project-quick-title">
+        <%= truncate(project.title, :length => 20) %>
+      </h3>
+    </div>
+    <div class="project-right">
+
+      <div class="percent"><%= project.weight %></div>
+
+      <p>Compatible</p>
+    </div>
+    <div class="project-center">
+      <p class="quick-description"><%= project.description %></p>
+      <div class="project-skills">
+        <% project.get_skills.each do |skill| %>
+          <div class="matching-skill"><%= skill %></div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div id="project-content" class="secondary-wrapper" data-state="invisible">
+
+  <h1 class="project_title"></h1>
+
+  <div class="description-short-wrapper">
+    <p class="project_description"></p>
+  </div>
+
+  <div class="row">
+    <div class="span4">
+      <div class="skills-wrapper">
+      </div>
+      <div class="apply-wrapper">
+
+        <%= link_to "Apply to Join", new_application_path , :class => "btn btn-primary btn-join", :id => "join" %>
+
+      </div>
+    </div> 
+
+    <div class="span5 description-long-wrapper">
+      <p>Lorem lean startup ipsum product market fit customer development acquihire technical cofounder. User engagement A/B testing shrink a market venture capital pitch deck. Social bookmarking group buying crowded market pivot onboarding freemium prototype ping pong. Early stage disruptive ecosystem community outreach dynamic location based strategic investor. </p>
+      <p>Accelerator photo sharing business school drop out ramen hustle crush it revenue traction platforms. Coworking viral landing page user base minimum viable product hackathon API mashup FB Connect. Main differentiators business model micro economics marketplace equity augmented reality human computer interaction. Board members super angel preferred stock. Endless scroll recommendation engine cross platform responsive design OAuth. </p>
+    </div>
+  </div>
+
+</div>
+

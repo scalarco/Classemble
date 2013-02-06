@@ -1,0 +1,1050 @@
+Connecting to database specified by database.yml
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" 
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 151ms (Views: 125.0ms | ActiveRecord: 22.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (67.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (94.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@foo.com' LIMIT 1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'the_user@foo.bar.org' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'first.last@foo.jp' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (102.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (126.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (88.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (88.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (69.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (82.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (118.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (66.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (59.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (66.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (69.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (85.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (14.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 28 Jan 2013 01:55:43 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "user@example.com"], ["encrypted_password", "$2a$04$FSbnAamjDIKyEJmHWh2ry.Wmhm1rBKpRnALZTEMw8IwCgDVRyEjUW"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Example User"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 01:55:43 UTC +00:00], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (4.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (67.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (60.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (78.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 28 Jan 2013 01:55:44 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "user@example.com"], ["encrypted_password", "$2a$04$29GUGcLqbIoy6eEQBnuESuHy7JRij1LSxG3BZYXcew9mtvtRCjsuy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Example User"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 01:55:44 UTC +00:00], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (8.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (72.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (111.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (103.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 28 Jan 2013 01:55:45 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "user@example.com"], ["encrypted_password", "$2a$04$E.fbMsgjjFHv/Legrn923.O8tVDmg.Ytyyj44orBlUyAo2TgDIiWu"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Example User"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 01:55:45 UTC +00:00], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (8.0ms)[0m  rollback transaction
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (57.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (148.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (117.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@foo,com' LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user_at_foo.org' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'example.user@foo.' LIMIT 1
+  [1m[36m (1.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (82.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (100.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (82.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (139.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (69.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (98.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (80.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (75.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (96.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (67.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (123.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (75.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (57.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (60.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (89.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (64.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (95.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (71.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (94.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (118.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 28 Jan 2013 01:55:51 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "user@example.com"], ["encrypted_password", "$2a$04$ro./eAc3O0gLrWTrhIUPA.StBxNaryqpFD0Jp7VqXjbH48Ux4rU0e"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Example User"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 01:55:51 UTC +00:00], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (8.0ms)[0m  rollback transaction
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (71.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (67.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (60.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (99.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (144.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "description", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "name", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 28 Jan 2013 01:55:51 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["description", nil], ["email", "user@example.com"], ["encrypted_password", "$2a$04$3e5aG/Rfy3LXuLkcJWSqGu/YMYsS8vuYZ4po8933ZiAomukIDooS6"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["name", "Example User"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 01:55:51 UTC +00:00], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  rollback transaction
+  [1m[36m (174.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (183.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (79.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (185.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (134.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (85.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (87.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (84.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:53 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:53 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (4.0ms)[0m  rollback transaction
+  [1m[36m (85.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (84.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (91.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (71.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (69.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (103.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:54 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:54 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (6.0ms)[0m  rollback transaction
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (82.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (71.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (90.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:54 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:54 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (1.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#update as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/1
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+  [1m[35m (7.0ms)[0m  rollback transaction
+  [1m[36m (80.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (80.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (80.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (90.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (66.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (87.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:55 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:55 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#update as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (6.0ms)[0m  rollback transaction
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (61.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (79.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (89.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (75.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:56 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:56 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#update as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}, "id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/projects/1
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+  [1m[35m (7.0ms)[0m  rollback transaction
+  [1m[36m (59.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (57.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (111.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (75.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:57 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:57 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#update as HTML
+  Parameters: {"project"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (5.0ms)[0m  rollback transaction
+  [1m[36m (67.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (73.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (100.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (85.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (68.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (101.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (134.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (249.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:58 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:58 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#update as HTML
+  Parameters: {"project"=>{"title"=>"invalid value"}, "id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (1.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 1.0ms)
+  [1m[35m (7.0ms)[0m  rollback transaction
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (82.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (81.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (82.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (70.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (82.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (95.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (101.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:55:59 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:55:59 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  [1m[35mProjectToSkill Load (0.0ms)[0m  SELECT "project_to_skills".* FROM "project_to_skills" WHERE "project_to_skills"."project_id" = 1
+Completed 500 Internal Server Error in 206ms
+  [1m[36m (3.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (84.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (87.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:56:00 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:56:00 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "projects" 
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "projects" [0m
+  [1m[35m (5.0ms)[0m  rollback transaction
+  [1m[36m (88.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (64.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (85.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (94.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (62.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (69.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (103.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (76.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:56:00 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:56:00 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ProjectsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.0ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mDELETE FROM "projects" WHERE "projects"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/projects
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[36m (7.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (89.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (245.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (78.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (72.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (88.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:56:01 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:56:01 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/project_to_skills/new?project_id=1
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+  [1m[35m (3.0ms)[0m  rollback transaction
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "applications";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'applications';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "interests";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'interests';
+  [1m[36m (72.0ms)[0m  [1mDELETE FROM "project_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'project_to_skills';
+  [1m[36m (71.0ms)[0m  [1mDELETE FROM "projects";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'projects';
+  [1m[36m (77.0ms)[0m  [1mDELETE FROM "roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'roles';
+  [1m[36m (78.0ms)[0m  [1mDELETE FROM "skills";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'skills';
+  [1m[36m (60.0ms)[0m  [1mDELETE FROM "user_to_interests";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_interests';
+  [1m[36m (65.0ms)[0m  [1mDELETE FROM "user_to_skills";[0m
+  [1m[35m (1.0ms)[0m  DELETE FROM sqlite_sequence where name = 'user_to_skills';
+  [1m[36m (86.0ms)[0m  [1mDELETE FROM "users";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users';
+  [1m[36m (74.0ms)[0m  [1mDELETE FROM "users_roles";[0m
+  [1m[35m (0.0ms)[0m  DELETE FROM sqlite_sequence where name = 'users_roles';
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "projects" 
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:56:02 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:56:02 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/project_to_skills/new?project_id=1
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "projects" 
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (57.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (102.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (75.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (163.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (80.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"MyString"}}
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "projects" ("category", "created_at", "description", "short_description", "skills", "title", "updated_at", "user_id", "weight") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["category", nil], ["created_at", Mon, 28 Jan 2013 01:56:03 UTC +00:00], ["description", nil], ["short_description", nil], ["skills", nil], ["title", "MyString"], ["updated_at", Mon, 28 Jan 2013 01:56:03 UTC +00:00], ["user_id", nil], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/project_to_skills/new?project_id=1
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" ORDER BY "projects"."id" DESC LIMIT 1
+  [1m[36m (6.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (139.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (80.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (210.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (181.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (78.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (92.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (87.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"invalid value"}}
+Completed 200 OK in 77ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (79.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (67.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (75.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (82.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (82.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (72.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ProjectsController#create as HTML
+  Parameters: {"project"=>{"title"=>"invalid value"}}
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (81.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (79.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (103.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ProjectsController#new as HTML
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (71.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (98.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (114.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (75.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (61.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (80.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (63.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (75.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (64.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (83.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (81.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/projects" for 127.0.0.1 at 2013-01-27 20:56:08 -0500
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (1.0ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  [1m[35mProject Load (0.0ms)[0m  SELECT "projects".* FROM "projects" ORDER BY weight DESC
+  Rendered layouts/_navigation.html.haml (8.0ms)
+  Rendered layouts/_messages.html.haml (1.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (78.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (111.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (81.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (66.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (60.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (103.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (57.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (81.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (74.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (86.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (96.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (106.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (78.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (72.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (81.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (69.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (61.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "users";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (85.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (82.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (135.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (70.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (98.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (84.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (209.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (91.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (65.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (106.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (77.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (95.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (99.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (84.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (68.0ms)[0m  DELETE FROM "applications";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'applications';[0m
+  [1m[35m (73.0ms)[0m  DELETE FROM "interests";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'interests';[0m
+  [1m[35m (62.0ms)[0m  DELETE FROM "project_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'project_to_skills';[0m
+  [1m[35m (132.0ms)[0m  DELETE FROM "projects";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'projects';[0m
+  [1m[35m (193.0ms)[0m  DELETE FROM "roles";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'roles';[0m
+  [1m[35m (301.0ms)[0m  DELETE FROM "skills";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'skills';[0m
+  [1m[35m (84.0ms)[0m  DELETE FROM "user_to_interests";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_interests';[0m
+  [1m[35m (91.0ms)[0m  DELETE FROM "user_to_skills";
+  [1m[36m (0.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'user_to_skills';[0m
+  [1m[35m (87.0ms)[0m  DELETE FROM "users";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (76.0ms)[0m  DELETE FROM "users_roles";
+  [1m[36m (1.0ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'users_roles';[0m

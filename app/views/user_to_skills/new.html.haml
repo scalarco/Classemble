@@ -1,0 +1,17 @@
+.hero-unit.width220.container
+  %h3.center
+    Check out them skills!
+  - current_user.user_to_skills.each do |e|
+    .ability
+      %span.badge.badge-warning.name
+        = e.name
+      %span.badge.badge-info
+        = e.level
+  = simple_form_for @skill do |f|
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.input :skill_id, :as => :select, :multiple => true, :collection => Skill.all, :input_html => { :class => "chzn-select" }
+    = f.input :level, :hint => "Please choose a number from 1-10."
+
+    %button.btn.btn-primary{:type => "submit", :data => {'update-target' => 'update-container'}}
+      Submit
+    = link_to "Back to Home", root_path, :class => "btn btn-warning"

@@ -1,0 +1,32 @@
+.white_wrapper
+  %h2
+    Apply for 
+    = @project.title + "!"
+  %br
+  .left_wrap
+    %h4
+      Name:
+    = current_user.name
+    %h4
+      Interests:
+      %br
+    - current_user.get_interests.each do |i|
+      %span{:class => 'badge badge-warning'}
+        = i
+      %br
+    %h4
+      Skills:
+      %br
+    - current_user.get_skills.each do |c|
+      %span{:class => 'badge badge-warning'}
+        = c
+
+  .right_wrap
+  = simple_form_for @application do |f|
+    = f.hidden_field :user_id, :value => current_user.id
+    = f.hidden_field :project_id, :value => params[:project_id]
+    %br
+
+    = f.input :message, :as => :text, :input_html => {:rows => 10,:style => "width:400px;margin-top:20px;"}, :hint => "Please provide the project manager with a description of why you are right for the job and touch on each of the relevant skills you have listed.", :placeholder => "enter a message"
+        
+    = f.submit "Submit", :class => "btn btn-primary btn-large" 
